@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//import 'package:vet_app/main.dart';
+import 'package:vet_app/account_setup.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -114,9 +116,17 @@ class SignIn extends StatelessWidget {
                 children: [
                   Text('dont have any account?'),
                   SizedBox(width: 5),
-                  Text(
-                    'Sign Up Now',
-                    style: TextStyle(color: Color(0xFF16A99F)),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AccountSetup()),
+                      );
+                    },
+                    child: Text(
+                      'Sign Up Now',
+                      style: TextStyle(color: Color(0xFF16A99F)),
+                    ),
                   ),
                 ],
               ),
